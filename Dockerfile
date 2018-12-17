@@ -1,4 +1,4 @@
-FROM zabbix/zabbix-server-mysql:ubuntu-3.4-latest
+FROM zabbix/zabbix-server-mysql:latest
+MAINTAINER Peter Foreman <peter@frmn.nl>
 
-RUN apt-get update && apt-get -y install python python-pip
-RUN pip install python-pushover
+RUN apk update && apk add python py-pip && pip install --upgrade pip && pip install python-pushover
